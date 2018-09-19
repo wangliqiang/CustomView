@@ -13,13 +13,10 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.customview.R;
-
-import java.util.logging.Logger;
 
 import static android.view.View.MeasureSpec.AT_MOST;
 

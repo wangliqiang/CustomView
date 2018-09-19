@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.ClockActivity">
 
-    <Button
-        android:id="@+id/toClock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="闹 钟" />
+    <com.app.customview.widget.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
 </LinearLayout>

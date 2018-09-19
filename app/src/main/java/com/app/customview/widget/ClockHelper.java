@@ -1,6 +1,8 @@
 package com.app.customview.widget;
 
 import android.animation.ValueAnimator;
+import android.util.Log;
+import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
@@ -20,7 +22,7 @@ public class ClockHelper extends TimerTask {
     public void start() {
         stop();
         timer = new Timer();
-        timer.schedule(this, 0, 100);
+        timer.schedule(this, 0, 1000);
     }
 
     public void stop() {
@@ -33,13 +35,13 @@ public class ClockHelper extends TimerTask {
         if (clockView == null) {
             return;
         }
-        RotateAnimation rotateAnimation = new RotateAnimation(-15, 15, clockView.getPivotX(), clockView.getPivotY());
+        RotateAnimation rotateAnimation = new RotateAnimation(-15, 15, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotateAnimation.setDuration(100);
         rotateAnimation.setInterpolator(new LinearInterpolator());
         rotateAnimation.setRepeatCount(15);
-        rotateAnimation.setRepeatMode(ValueAnimator.RESTART);
+//        rotateAnimation.setRepeatMode(ValueAnimator.RESTART);
         rotateAnimation.setFillAfter(false);
-        clockView.setAnimation(rotateAnimation);
+        clockView.startAnimation(rotateAnimation);
     }
 
     @Override
