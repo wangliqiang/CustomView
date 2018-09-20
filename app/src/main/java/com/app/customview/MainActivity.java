@@ -33,14 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         pieView = findViewById(R.id.pieView);
 
-        list.add(new PieData("1", 20));
-        list.add(new PieData("2", 35));
-        list.add(new PieData("3", 5));
-        list.add(new PieData("4", 30));
-        list.add(new PieData("5", 10));
+        list.add(new PieData("1", 55));
+        list.add(new PieData("2", 25));
+        list.add(new PieData("3", 15));
+        list.add(new PieData("4", 5));
 
         pieView.setData(list);
-        pieView.setStartAngle(0);
+        pieView.setStartAngle(270);
     }
 
     @Override
