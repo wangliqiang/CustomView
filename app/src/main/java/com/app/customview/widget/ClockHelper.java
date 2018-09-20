@@ -1,10 +1,10 @@
 package com.app.customview.widget;
 
-import android.animation.ValueAnimator;
-import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+
+import com.app.customview.view.ClockView;
 
 import java.util.Calendar;
 import java.util.Timer;

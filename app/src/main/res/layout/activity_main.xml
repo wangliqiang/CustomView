@@ -5,12 +5,19 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/toClock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="闹 钟" />
+    <com.app.customview.view.PieView
+        android:id="@+id/pieView"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <com.app.customview.view.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp" />
+
 </LinearLayout>
