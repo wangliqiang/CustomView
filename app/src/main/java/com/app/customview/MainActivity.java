@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.app.customview.bean.PieData;
+import com.app.customview.view.CircleView;
 import com.app.customview.widget.ClockHelper;
 import com.app.customview.view.ClockView;
 import com.app.customview.view.PieView;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ClockView clockView;
     ClockHelper clockHelper;
+    CircleView circleView;
 
     Button toClock;
     PieView pieView;
@@ -27,11 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         clockView = findViewById(R.id.clockView);
+        circleView = findViewById(R.id.circleView);
+        pieView = findViewById(R.id.pieView);
+
         clockHelper = new ClockHelper(clockView);
         clockHelper.start();
         clockView.setOnClickListener(this);
 
-        pieView = findViewById(R.id.pieView);
 
         list.add(new PieData("1", 55));
         list.add(new PieData("2", 25));

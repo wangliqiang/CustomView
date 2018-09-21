@@ -3,21 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.app.customview.view.PieView
-        android:id="@+id/pieView"
-        android:layout_width="150dp"
-        android:layout_height="150dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.app.customview.view.ClockView
-        android:id="@+id/clockView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.app.customview.view.Bezier
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp" />
+
+            <com.app.customview.view.CircleView
+                android:id="@+id/circleView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp" />
+
+            <com.app.customview.view.PieView
+                android:id="@+id/pieView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp" />
+
+            <com.app.customview.view.ClockView
+                android:id="@+id/clockView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

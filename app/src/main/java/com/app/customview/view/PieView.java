@@ -97,8 +97,6 @@ public class PieView extends View {
             pieData.setPercentage(percentage);
             pieData.setAngle(angle);
             sumAngle += angle;
-
-            Log.e("angle", "=" + pieData.getAngle());
         }
     }
 }
